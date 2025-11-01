@@ -11,13 +11,13 @@ server.registerTool(
     "add",
     {
         title: "Addition tool",
-        description: "add 2 numbers together",
+        description: "add two numbers together",
         inputSchema: {
             a: z.number(),
             b: z.number()
         }
     },
-    async (a, b) => {
+    async ({a, b}) => {
         return {
             content: [{ type: "text", text: String(a + b)}]
         }
